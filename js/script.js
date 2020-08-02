@@ -2,7 +2,7 @@ document.getElementById('formulario').addEventListener('submit', adicionarProdut
 
 //corrigir apagar produto
 //Testando git
-function adicionarProduto(e){
+function adicionarProduto(){
     let produtoElement = document.getElementById('inpt-produto').value;
     let valorElement = document.getElementById('inpt-valor').value;
     let quantidadeElement = document.getElementById('inpt-quantidade').value;
@@ -32,7 +32,9 @@ function adicionarProduto(e){
    
 }
 
-(function mostrarLista(){
+mostrarLista();
+
+function mostrarLista(){
     var produtosElement = document.getElementById('produtos');
     var dados = JSON.parse( localStorage.getItem('dados'));
     var tabela = document.getElementById('tabela');
@@ -62,7 +64,7 @@ function adicionarProduto(e){
         btnExcluir.onclick = function(){
             dados.splice(i,1);
             localStorage.setItem('dados', JSON.stringify(dados));
-            
+            window.location.reload()
         }
 
         td.innerHTML = nome;
@@ -79,5 +81,5 @@ function adicionarProduto(e){
         //adicionando o corpo da tabela na tabela
         tabela.appendChild(tbody);
     }
-})();
+};
 
