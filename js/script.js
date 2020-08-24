@@ -1,8 +1,7 @@
-document.getElementById('formulario').addEventListener('submit', adicionarProduto);
-
-//corrigir apagar produto
-//Testando git
-function adicionarProduto(){
+document.getElementById('formulario').addEventListener('submit', (e) =>{
+    
+    e.preventDefault()
+    
     let produtoElement = document.getElementById('inpt-produto').value;
     let valorElement = document.getElementById('inpt-valor').value;
     let quantidadeElement = document.getElementById('inpt-quantidade').value;
@@ -30,12 +29,11 @@ function adicionarProduto(){
         localStorage.setItem('dados',JSON.stringify(produtos));
     }
    
-}
+})
 
 mostrarLista();
 
 function mostrarLista(){
-    var produtosElement = document.getElementById('produtos');
     var dados = JSON.parse( localStorage.getItem('dados'));
     var tabela = document.getElementById('tabela');
    
