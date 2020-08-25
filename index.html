@@ -48,58 +48,8 @@
             
         </div><!--Div mostra tabela-->
     </div><!--Div Principal-->
-    <script src="js/script.js"></script>
-</body>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Cadastro de Estoque</title>
-</head>
-<body>
-    <div id="header_" class="jumbotron">
-        <h4>Sistema de cadastro de estoque</h4>
-    </div>
-    <div id="app" class="container jumbotron container p-3 my-3  text-white" >
-        <div class="form-group">
-            <form id="formulario">
-                <div class="form-group  ">
-                    <input type="text" placeholder="Produto" class="form-control" id="inpt-produto">
-                </div>
-                <div class="form-group ">
-                    <input type="number" placeholder="Valor" class="form-control" id="inpt-valor">
-                </div>
-                <div class="form-group ">
-                    <input type="number" placeholder="Quantidade" class="form-control" id="inpt-quantidade">
-                </div>
-                <div class="">
-                    <button type="submit" class="btn btn-primary " id='btn-cadastrar'>Cadastrar</button>
-                    <button type="button" class="btn btn-danger " id='btn-cancelar'>Cancelar</button>
-                </div>
-               
-            </form>
-        </div>
-        <div id="produtos" class="">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Pesquisar">
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-primary " id='btn-cadastrar'>Pesquisar</button>
-            </div>
-            <table id="tabela" class="table">
-                <thead>
-                    <th>Nome</th>
-                    <th>Valor</th>
-                    <th>Quantidade</th>
-                    <th>Ação</th>
-                </thead>
-            </table>
-            
-        </div><!--Div mostra tabela-->
-    </div><!--Div Principal-->
+    <script src="model/Product.js"></script>
+    <script src="controller/productController.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

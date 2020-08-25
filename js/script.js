@@ -1,3 +1,8 @@
+
+var product = new Product('arroz',2,3.3)
+
+console.log(product.productName)
+
 document.getElementById('formulario').addEventListener('submit', (e) =>{
     
     e.preventDefault()
