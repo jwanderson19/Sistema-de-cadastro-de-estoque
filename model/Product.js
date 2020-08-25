@@ -1,4 +1,4 @@
-class Product{
+class Product {
 
     constructor(name,qnt,value){
         this._productName = name
