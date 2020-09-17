@@ -1,56 +1,53 @@
-export default ()=>{
-     let data = new Date()
-    var produto = [
-        {
-            name:'Arroz',
-            id:1,
-            date: data.toLocaleString(),
-            qtd: 5,
-            valor:232,
-            categoria: 'Alimentos'
-        },
-        {
-            name:'Coca-cola',
-            id:2,
-            date:data.toLocaleString(),
-            qtd: 44,
-            valor:5,
-            categoria:'limpeza'
-        }
-    ]
-const temp = []
+class Produto{
+ 
+    constructor(){
+        this.data = Date.now()
+        this.produto = []   
+        this.row = []
+        this.addCol()
 
-for(let i = 0;i <= produto.length - 1;i++){
-    temp[i] = `
-    <tr>
-        <td>${produto[i].id}</td>
-        <td>${produto[i].name}</td>
-        <td>${produto[i].valor}</td>
-        <td>${produto[i].qtd}</td>
-        <td>${produto[i].categoria}</td>
-        <td>${produto[i].date}</td>
-    </tr>
-    `
+    }
+
+    
+    
+
+    addCol(){
+        for(let i = 0;i <= this.produto.length - 1;i++){
+            this.row[i] = `
+            <tr>
+                <td>${this.produto[i].name}</td>
+                <td>${this.produto[i].value}</td>
+                <td>${this.produto[i].qtd}</td>
+                <td>${this.produto[i].categoria}</td>
+                <td>${this.produto[i].data}</td>
+            </tr>
+            `
+        } 
+    }
+    
+
+    estoque(){   
+        return (`
+                    <div class='conp-content bx'>
+                        <h1>Estoque</h1>
+                        <table>
+                            <thead>            
+                                <tr>
+                                    <th>Produto</th>
+                                    <th>Preço</th>
+                                    <th>Quantidade</th>
+                                    <th>Categoria</th>
+                                    <th>Data de Cadastro</th> 
+                                </tr>
+                            </thead>
+                            <tbody>
+                            ${this.row}
+                            </tbody>
+                        </table>
+                    </div>
+                `
+            )
+    }
 }
-    return (`
-    <div class='conp-content'>
-        <h1>Estoque</h1>
-        <table>
-            <thead>            
-                <tr>
-                    <th>id</th>
-                    <th>Produto</th>
-                    <th>Preço</th>
-                    <th>Quantidade</th>
-                    <th>Categoria</th>
-                    <th>Data de Cadastro</th> 
-                </tr>
-            </thead>
-            <tbody>
-            ${temp}
-            </tbody>
-        </table>
-    </div>
-        `
-        )
-}
+
+export default Produto = new Produto()

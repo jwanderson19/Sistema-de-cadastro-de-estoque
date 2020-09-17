@@ -1,9 +1,10 @@
 import admin from './components/admin.js'
-import estoque from './components/estoque.js'
+import Estoque from './components/estoque.js'
 import addEstoque from './components/addEstoque.js'
 import clients from './components/client.js'
 import addClient from './components/addClient.js'
 import clientInfo from './components/clientInfo.js'
+
 
 (function selectMenuList(){
     const menuEl = document.querySelectorAll('.side-bar-menu > li')
@@ -23,12 +24,11 @@ function showComponent(index){
             document.getElementById('page-content').innerHTML =  admin()             
             break;
         case 1:
-            document.getElementById('page-content').innerHTML = estoque()
+            document.getElementById('page-content').innerHTML = Estoque.estoque()
         break;
         case 2:
             document.getElementById('page-content').innerHTML = addEstoque()
-        break;
-
+        break; 
         case 3:
             document.getElementById('page-content').innerHTML = clients()
         break;
@@ -43,3 +43,17 @@ function showComponent(index){
     }
    
 }
+document.getElementById('page-content').addEventListener('submit',event=>{
+    Estoque.produto.push(
+        {
+        name:document.getElementById('prod-name').value,
+        value:document.getElementById('prod-val').value,
+        qtd:document.getElementById('prod-qtd').value,
+        categoria:document.getElementById('prod-type').value,
+        data:Estoque.data
+        }
+    )
+    
+    Estoque.addCol()
+    console.log(Estoque.produto)
+})

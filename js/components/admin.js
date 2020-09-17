@@ -24,7 +24,7 @@ for(let i = 0;i <= admin.length - 1;i++){
     `
 }
     return (`
-    <div class='conp-content'>
+    <div class='conp-content bx'>
         <h1>Bem Vindo ${admin[0].name}</h1>
         <table>
             <thead>            

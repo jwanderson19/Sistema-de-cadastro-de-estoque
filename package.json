@@ -1,0 +1,22 @@
+{
+  "name": "sistema-de-cadastro-de-estoque",
+  "version": "1.0.0",
+  "description": "Estou estudado javascript e resolvir praticar o que aprendi até agora. Também estou aprendendo a usar o github.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwanderson19/Sistema-de-cadastro-de-estoque.git"
+  },
+  "author": "Wanderson soares",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jwanderson19/Sistema-de-cadastro-de-estoque/issues"
+  },
+  "homepage": "https://github.com/jwanderson19/Sistema-de-cadastro-de-estoque#readme",
+  "dependencies": {
+    
+  }
+}
